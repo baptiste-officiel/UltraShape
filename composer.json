@@ -1,0 +1,15 @@
+{
+    "name": "kercode/ultra-shape",
+    "autoload": {
+        "psr-4": {
+            "Projet\\": "./app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Baptiste LEJEUNE",
+            "email": "baptiste.lejeune@hotmail.com"
+        }
+    ],
+    "require": {}
+}
