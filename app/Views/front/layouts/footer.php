@@ -13,7 +13,7 @@
         <div id="reseaux">
             <!-- icones réseaux  -->
         </div>
-        <p id="mentions-footer">Copyright 2022 - Mentions Légales - RGPD</p>
+        <p id="mentions-footer">Copyright 2022 - <a href="#">Mentions Légales</a> - <a href="#">RGPD</a></p>
     </div>
 </footer>
 

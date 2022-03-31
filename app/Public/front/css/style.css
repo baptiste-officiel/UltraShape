@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+header#bandeau{
+    background: url(../img/fond-mobile.jpg);
+    height: 100vh;
+}
+
+header#bandeau .container #nav-bandeau{
+    display: flex;
+    justify-content: space-between;
+}
+
+header#bandeau .container #nav-bandeau #logo{
+    width: 35px;
+    height: auto;
+}
+
+
+
+header#bandeau .container #nav-bandeau #menu-bandeau input[type=checkbox]{
+    display: none;
+}
+
+header#bandeau .container #nav-bandeau #menu-bandeau label img{
+    display: block;
+    text-align: right;
+    padding: 20px;
+    cursor: pointer;
+}
+
+header#bandeau .container #nav-bandeau #menu-bandeau #menu{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none; 
+}
+
+header#bandeau .container #nav-bandeau #menu-bandeau input[type=checkbox]:checked + #menu{
+    display: block;
+}

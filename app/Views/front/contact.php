@@ -1,13 +1,13 @@
 <?php
-require_once './layouts/header.php';
+require_once 'layouts/header.php';
 ?>
 
 <div id="contenu">
     <div id="contact" class="container">
         <form action="index.php?action=contactPost" method="post" id="contact-form">
 
-            <label for="name">Nom</label>
-            <input type="text" name="name" id="name">
+            <label for="lastname">Nom</label>
+            <input type="text" name="lastname" id="lastname">
 
             <label for="firstname">Prénom</label>
             <input type="text" name="firstname" id="firstname">
@@ -21,8 +21,8 @@ require_once './layouts/header.php';
             <label for="object">Objet de la demande</label>
             <input type="text" name="object" id="object">
 
-            <label for="message">Message</label>
-            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <label for="content">Message</label>
+            <textarea name="content" id="content" cols="30" rows="10"></textarea>
 
             <button type="submit">Envoyer</button>
         </form>
@@ -30,5 +30,5 @@ require_once './layouts/header.php';
 </div>
 
 <?php
-require_once './layouts/footer.php';
+require_once 'layouts/footer.php';
 ?>

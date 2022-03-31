@@ -1,5 +1,6 @@
 {
     "name": "kercode/ultra-shape",
+    "description": "Projet Ultra Shape",
     "autoload": {
         "psr-4": {
             "Projet\\": "./app/"

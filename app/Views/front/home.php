@@ -1,5 +1,5 @@
 <?php
-require_once './layouts/header.php';
+require_once 'layouts/header.php';
 ?>
 
 <div id="contenu">
@@ -35,5 +35,5 @@ require_once './layouts/header.php';
 </div>
 
 <?php
-require_once './layouts/footer.php';
+require_once 'layouts/footer.php';
 ?>

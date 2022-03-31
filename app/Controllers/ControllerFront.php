@@ -1,5 +1,7 @@
 <?php
 
+// Le ControllerFront avec les méthodes à exécuter qui fait le lien entre les Models et les Views 
+
 namespace Projet\Controllers;
 
 class ControllerFront{
@@ -9,5 +11,16 @@ class ControllerFront{
 
     function contactFront(){
         require 'app/Views/front/contact.php';
+    }
+
+    function contactPost($lastname, $firstname, $email, $phone, $object, $content){
+        $postMail = new \Projet\Models\ContactModel();
+
+        if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+            $email = $postMail->postMail($lastname, $firstname, $email, $phone, $object, $content);
+            require 'app/Views/front/confirmContact.php';
+        } else{
+            header('Location: app/Views/front/error.php');
+        }
     }
 }
