@@ -26,8 +26,8 @@
 
                 <div id="menu-bandeau">
                     <!-- On gère le menu burger en css à l'aide d'une checkbox  -->
-                    <input type="checkbox" name="burger" id="burger" role="button">
                     <label for="burger"><img src="./app/Public/front/img/burger.png" alt="Menu"></label>
+                    <input type="checkbox" name="burger" id="burger" role="button">
 
                     <ul id="menu">
                         <li><a href="/">Accueil</a></li>

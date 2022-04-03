@@ -24,19 +24,24 @@ header#bandeau{
 }
 
 header#bandeau .container #nav-bandeau{
-    display: flex;
-    justify-content: space-between;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* max-height: 100px; */
 }
 
 header#bandeau .container #nav-bandeau #logo{
     width: 35px;
     height: auto;
+    margin-left: 30px;
+    margin-top: 30px;
 }
 
 
 
 header#bandeau .container #nav-bandeau #menu-bandeau input[type=checkbox]{
     display: none;
+    position: absolute;
+    right: 10px;
 }
 
 header#bandeau .container #nav-bandeau #menu-bandeau label img{
@@ -44,6 +49,10 @@ header#bandeau .container #nav-bandeau #menu-bandeau label img{
     text-align: right;
     padding: 20px;
     cursor: pointer;
+    position: absolute;
+    z-index: 1000000;
+    right: 10px;
+    top : 5px
 }
 
 header#bandeau .container #nav-bandeau #menu-bandeau #menu{
@@ -52,8 +61,26 @@ header#bandeau .container #nav-bandeau #menu-bandeau #menu{
     flex-direction: column;
     justify-content: space-between;
     display: none; 
+    position: absolute;
+    background-color: red;
+    left: 0;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    padding: 42vh 0;
+    
 }
 
 header#bandeau .container #nav-bandeau #menu-bandeau input[type=checkbox]:checked + #menu{
     display: block;
+}
+
+header#bandeau .container #titre-principal{
+    margin-top: 55vh;
+}
+
+header#bandeau .container #titre-principal h1{
+    background-color: rgb(245, 245, 245);
+    width: 200px;
+    padding: 5px 20px;
 }
