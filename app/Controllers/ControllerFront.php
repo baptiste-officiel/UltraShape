@@ -13,11 +13,11 @@ class ControllerFront{
         require 'app/Views/front/contact.php';
     }
 
-    function contactPost($lastname, $firstname, $email, $phone, $object, $content){
+    function contactPost($lastname, $firstname, $email, $object, $content){
         $postMail = new \Projet\Models\ContactModel();
 
         if(filter_var($email, FILTER_VALIDATE_EMAIL)){
-            $email = $postMail->postMail($lastname, $firstname, $email, $phone, $object, $content);
+            $email = $postMail->postMail($lastname, $firstname, $email, $object, $content);
             require 'app/Views/front/confirmContact.php';
         } else{
             header('Location: app/Views/front/error.php');

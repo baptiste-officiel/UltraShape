@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -26,11 +27,11 @@
 
                 <div id="menu-bandeau">
                     <!-- On gère le menu burger en css à l'aide d'une checkbox  -->
-                    <label for="burger"><img src="./app/Public/front/img/burger.png" alt="Menu"></label>
+                    <label for="burger"><img src="./app/Public/front/img/burger-blanc.png" alt="Menu"></label>
                     <input type="checkbox" name="burger" id="burger" role="button">
 
                     <ul id="menu">
-                        <li><a href="/">Accueil</a></li>
+                        <li><a href="index.php">Accueil</a></li>
                         <li><a href="index.php?action=creations">Créations</a></li>
                         <li><a href="index.php?action=reparations">Réparations</a></li>
                         <li><a href="index.php?action=about">A propos</a></li>
@@ -40,7 +41,9 @@
             </nav>
             <div id="titre-principal">
                 <h1>Ultra Shape</h1>
-                <h3>Artisan Shaper</h3>
+            <div id="subtitle">
+            <h3>Artisan Shaper</h3>
+            </div>
             </div>
         </div>
     </header>

@@ -17,12 +17,11 @@ try{
             $lastname = htmlspecialchars($_POST['lastname']);
             $firstname = htmlspecialchars($_POST['firstname']);
             $email = htmlspecialchars($_POST['email']);
-            $phone = htmlspecialchars($_POST['phone']);
             $object = htmlspecialchars($_POST['object']);
             $content = htmlspecialchars($_POST['content']);
 
-            if(!empty($lastname) && (!empty($firstname) && (!empty($email) && (!empty($phone) && (!empty($object) && (!empty($content))))))){
-                $controllerFront->contactPost($lastname, $firstname, $email, $phone, $object, $content);
+            if(!empty($lastname) && (!empty($firstname) && (!empty($email) && (!empty($object) && (!empty($content)))))){
+                $controllerFront->contactPost($lastname, $firstname, $email, $object, $content);
             } else{
                 throw new Exception('Tous les champs ne sont pas remplis !');
             }

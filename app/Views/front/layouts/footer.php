@@ -1,6 +1,7 @@
 <footer id="footer">
     <div class="container">
         <!-- svg  -->
+        <img src="./app/Public/front/img/wavefoot.svg" alt="Vague">
         <nav id="nav-footer">
             <ul id="menu-footer">
                 <li><a href="/">Accueil</a></li>
@@ -12,8 +13,11 @@
         </nav>
         <div id="reseaux">
             <!-- icones réseaux  -->
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
         </div>
-        <p id="mentions-footer">Copyright 2022 - <a href="#">Mentions Légales</a> - <a href="#">RGPD</a></p>
+        <p id="mentions-footer">Copyright 2022 - <a href="#">Mentions Légales</a> <br> <a href="#">RGPD</a></p>
     </div>
 </footer>
 
