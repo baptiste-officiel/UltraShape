@@ -13,12 +13,19 @@ try{
 
     if (isset($_GET['action'])){
 
+        // Page de création d'un admin 
         if($_GET['action'] == 'createAdminPage'){
             $adminController->createAdminPage();
         }
 
+        // Page de connexion d'un admin 
         if($_GET['action'] == 'connexionAdminPage'){
             $adminController->connexionAdmin();
+        }
+
+        // Affichage du dashboard 
+        if($_GET['action'] == 'dashboard'){
+            $adminController->dashboard();
         }
 
         // création d'un admin 
@@ -30,6 +37,7 @@ try{
             $adminController->createAdmin($firstname, $mdp, $mail);
         }
 
+        // connexion de l'admin 
         if($_GET['action'] == 'connexionAdmin'){
             $mail = htmlspecialchars($_POST['mail']);
             $mdp = $_POST['password'];
@@ -40,14 +48,23 @@ try{
             }
         }
 
+        // Affichage des mails 
+        if ($_GET['action'] == 'showMails'){
+            $adminController->showMails();
+        }
+
+        // Suppression d'un mail 
+        if ($_GET['action'] == 'deleteMail'){
+            $id = $_GET['id'];
+            $adminController->deleteMail($id);
+        }
+
+        // Déconnexion admin 
         elseif ($_GET['action'] == 'deconnexion'){
             session_destroy();
             header('Location: index.php');
         }
 
-        elseif ($_GET['action'] == 'showMails'){
-            $adminController->showMails();
-        }
 
     } else{
         $adminController->connexionAdmin();

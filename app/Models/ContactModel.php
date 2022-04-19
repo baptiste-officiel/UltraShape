@@ -4,6 +4,7 @@ namespace Projet\Models;
 
 class ContactModel extends Manager{
 
+    // Envoyer un message via le formulaire de contact 
     public function postMail($lastname, $firstname, $email, $object, $content){
         $bdd = $this->dbConnect();
         $req = $bdd->prepare(
@@ -13,6 +14,7 @@ class ContactModel extends Manager{
         return $req;
     }
 
+    // Compter les mails 
     public function countMail(){
         $bdd = $this->dbConnect();
         $req = $bdd->prepare('SELECT COUNT(`email`) FROM contact WHERE id');
@@ -20,9 +22,18 @@ class ContactModel extends Manager{
         return $req;
     }
 
+    // Aller chercher tous les mails 
     public function getMails(){
         $bdd = $this->dbConnect();
         $req = $bdd->query('SELECT * FROM contact WHERE id');
+        return $req;
+    }
+
+    // Supprimer un mail 
+    public function deleteMail($id){
+        $bdd = $this->dbConnect();
+        $req = $bdd->prepare('DELETE FROM contact WHERE id = ?');
+        $req->execute(array($id));
         return $req;
     }
 }

@@ -48,10 +48,27 @@ class AdminController{
         }
     }
 
+    // Affichage des mails de contact récupérés dans la db 
     public function showMails(){
         $mails = new \Projet\Models\ContactModel();
         $allMails = $mails->getMails();
 
         require 'app/Views/admin/mails.php';
+    }
+
+    // affichage du dashboard 
+    public function dashboard(){
+        $countMail = new \Projet\Models\ContactModel();
+        $nbMail = $countMail->countMail();
+        
+        require 'app/Views/admin/dashboard.php';
+    }
+
+    // Suppression de mail 
+    public function deleteMail($id){
+        $deleteMail = new \Projet\Models\ContactModel;
+        $deleteMail = $deleteMail->deleteMail($id);
+
+        header('Location : indexAdmin.php?action=showMails');
     }
 }

@@ -1,7 +1,7 @@
 <?php require_once './app/Views/admin/layouts/headerAdmin.php'; ?>
 
 <div id="contenuDashboard">
-    
+    <div class="container">
 <table>
 <thead>
     <tr>
@@ -10,6 +10,7 @@
         <td>Mail</td>
         <td>Objet</td>
         <td>Message</td>
+        <td></td>
     </tr>
 </thead>
 
@@ -21,12 +22,16 @@
         <td><?= htmlspecialchars($allMail['email']); ?></td>
         <td><?= htmlspecialchars($allMail['object']); ?></td>
         <td><?= htmlspecialchars($allMail['content']); ?></td>
+        <td><a href="indexAdmin.php?action=deleteMail">Delete</a></td>
     </tr>
     
     <?php } ?>
 </tbody>
 </table>
 
+<a class="bouton-noir" id="retour-dashboard" href="indexAdmin.php?action=dashboard">Retour</a>
+
+</div>
 </div>
 
 
