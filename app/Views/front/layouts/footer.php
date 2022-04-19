@@ -13,9 +13,9 @@
         </nav>
         <div id="reseaux">
             <!-- icones réseaux  -->
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-youtube"></i></a>
-            <a href="#"><i class="fa-brands fa-facebook-square"></i></a>
+            <a href="#"><img src="./app/Public/front/img/instagram.svg" alt="Instagram"></a>
+            <a href="#"><img src="./app/Public/front/img/youtube.svg" alt="Youtube"></a>
+            <a href="#"><img src="./app/Public/front/img/facebook.svg" alt="Facebook"></a>
         </div>
         <p id="mentions-footer">Copyright 2022 - <a href="#">Mentions Légales</a> <br> <a href="#">RGPD</a></p>
     </div>

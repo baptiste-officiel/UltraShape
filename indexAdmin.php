@@ -3,6 +3,9 @@
 session_start();
 
 require_once __DIR__. '/vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 
 try{
 
@@ -41,6 +44,11 @@ try{
             session_destroy();
             header('Location: index.php');
         }
+
+        elseif ($_GET['action'] == 'showMails'){
+            $adminController->showMails();
+        }
+
     } else{
         $adminController->connexionAdmin();
     }

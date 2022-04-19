@@ -36,6 +36,9 @@ class AdminController{
         $_SESSION['id'] = $resultat['id'];
         $_SESSION['firstname'] = $resultat['firstname'];
 
+        $countMail = new \Projet\Models\ContactModel();
+        $nbMail = $countMail->countMail();
+
         if ($isPasswordCorrect){
             require 'app/Views/admin/dashboard.php';
         }
@@ -43,5 +46,12 @@ class AdminController{
         else{
             echo 'Vos identifiants sont incorrects';
         }
+    }
+
+    public function showMails(){
+        $mails = new \Projet\Models\ContactModel();
+        $allMails = $mails->getMails();
+
+        require 'app/Views/admin/mails.php';
     }
 }

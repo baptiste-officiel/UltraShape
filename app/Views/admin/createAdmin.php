@@ -2,7 +2,7 @@
 require_once './app/Views/admin/layouts/headerAdmin.php';
 ?>
 
-<main id="contenu">
+<main id="contenuAdmin">
     <div class="container">
         <section id="pageConnexionAdmin">
             <h1>Inscription Administrateur</h1>

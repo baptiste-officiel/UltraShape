@@ -5,13 +5,16 @@ require_once 'layouts/header.php';
 <div id="contenu">
     <div class="container">
         <section id="creations-home">
-            <h2>Créations</h2>
-            <p>Découvre nos dernières réalisations et prends contact avec nous pour concevoir ta board custom !</p>
+            <div id="texte-creation">
+                <h2>Créations</h2>
+                <p>Découvre nos dernières réalisations et prends contact avec nous pour concevoir ta board custom !</p>
+                <p> <a class="bouton-noir" href="index.php?action=creations">Voir tout</a>
+                </p>
+            </div>
             <!-- img  -->
             <figure>
-            <img src="./app/Public/front/img/creations.jpg" alt="Créations">
+                <img src="./app/Public/front/img/creations.jpg" alt="Créations">
             </figure>
-            <a class="bouton-noir" href="index.php?action=creations">Voir tout</a>
         </section>
 
         <section id="reparations-home">
@@ -22,13 +25,15 @@ require_once 'layouts/header.php';
         </section>
 
         <section id="about-home">
-            <h2>A propos</h2>
-            <p>L’histoire de l’atelier et du shaper, le palmarès..</p>
+            <div id="texte-creation">
+                <h2>A propos</h2>
+                <p>L’histoire de l’atelier et du shaper, le palmarès..</p>
+                <p><a class="bouton-noir" href="index.php?action=about">Voir tout</a></p>
+            </div>
             <!-- img  -->
             <figure>
                 <img src="./app/Public/front/img/atelier.jpg" alt="Atelier">
             </figure>
-            <a class="bouton-noir" href="index.php?action=about">Voir tout</a>
         </section>
 
         <section id="contact-home">

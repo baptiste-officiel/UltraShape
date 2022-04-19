@@ -69,6 +69,7 @@ ul{
 
 header#bandeau{
     background: url(../img/fond-mobile.jpg) no-repeat center;
+    background-size: cover;
     height: 100vh;
 }
 
@@ -121,7 +122,7 @@ header#bandeau #nav-bandeau #menu-bandeau #menu{
     box-sizing: border-box;
     /* padding-right: 25px; */
     width: 100%;
-    padding-left: 20px;
+    /* padding-left: 20px; */
     padding-top: 75px;
     height: 100vh;
     /* padding: 42vh 0; */
@@ -130,7 +131,7 @@ header#bandeau #nav-bandeau #menu-bandeau #menu{
 }
 
 header#bandeau #nav-bandeau #menu-bandeau #menu li{
-    /* background: black; */
+    /* background: blueviolet; */
     padding: 22px 0;
     font-size: 1.4rem;
 }
@@ -224,12 +225,20 @@ header#bandeau #titre-principal #subtitle h3{
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    padding: 20px 0;
+    padding: 0 0 30px;
     margin: 0 auto;
+    position: relative;
+}
+
+#contenu .container #creations-home h2, #contenu .container #about-home h2{
+    text-align: center;
+    margin-top: -50px;
 }
 
 #contenu .container #creations-home p, #contenu .container #about-home p{
     text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0;
 }
 
 #contenu .container #creations-home figure, #contenu .container #about-home figure{
@@ -237,12 +246,23 @@ header#bandeau #titre-principal #subtitle h3{
     max-height: 50vh;
     overflow: hidden;
     border-radius: 5px;
-
+    margin-top: -150px;
 }
 
 #contenu .container #creations-home figure img, #contenu .container #about-home figure img{
     width: 100%;
     height: 100%;
+}
+
+
+#contenu .container #creations-home #texte-creation p:last-child, #contenu .container #about-home #texte-creation p:last-child{
+    position: absolute;
+    bottom: 55px; 
+    text-align: center;
+    /* margin: 10px auto; */
+    width: 100%;
+    /* background-color: red;    */
+    left: 0;
 }
 
 
@@ -323,6 +343,11 @@ header#bandeau #titre-principal #subtitle h3{
     margin: 0 15px;
 }
 
+#footer .container #reseaux img{
+    width: 30px;
+    height: auto;
+    vertical-align: middle;
+}
 
 #footer .container #mentions-footer, #footer .container #mentions-footer a{
     width: 100%;
@@ -415,6 +440,116 @@ header#bandeau #titre-principal #subtitle h3{
 }
 
 
+/* ----------------------- indexAdmin -----------------  */
+
+#contenuAdmin #pageConnexionAdmin h1, #contenuDashboard h1{
+    font-weight: 300;
+}
+
+#contenuAdmin, #contenuDashboard{
+    background: url(../../admin/img/gradient.png) no-repeat center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contenuAdmin #pageConnexionAdmin{
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    width: 80%;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+#contenuAdmin #pageConnexionAdmin form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 30px auto;
+}
+
+#contenuAdmin #pageConnexionAdmin form input{
+    margin: 5px 0;
+    padding: 5px 7px;
+    border: none;
+    border: 1px rgb(192, 192, 192) solid;
+    border-radius: 8px;
+}
+
+#contenuAdmin #pageConnexionAdmin form button{
+
+        display: block;
+        margin: 20px auto 0;
+        background: none;
+        border: none;
+        background-color: black;
+        border: 1px black solid;
+        transition-property: background;
+        transition-duration: 0.2s;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 20px;
+        font-weight: 500;
+        cursor: pointer;
+}
+
+#contenuAdmin #pageConnexionAdmin form button:hover{
+    background-color: white;
+    color: black;
+}
+
+#contenuAdmin #pageConnexionAdmin a{
+    color: rgba(88, 88, 88, 0.774);
+    font-size: 0.7rem;
+}
+
+#contenuAdmin #retour{
+    display: block;
+    margin: 30px auto 0;
+    background: black;
+    border: 1px solid black;
+    transition-property: background;
+    transition-duration: 0.2s;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    max-width: 150px;
+    text-align: center;
+}
+
+#contenuAdmin #retour:hover{
+    background: none;
+    color: black;
+}
+
+#contenuAdmin #pageConnexionAdmin #autre{
+    border-top: 1px solid rgba(88, 88, 88, 0.774);
+    padding-top: 8px;
+}
+
+
+/* --------------------------------- View Mails -------------------------  */
+#contenuDashboard table td{
+    border: 1px solid rgb(59, 58, 58);
+    padding: 7px 12px;
+}
+
+#contenuDashboard table thead{
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#contenuDashboard table{
+    border-collapse: collapse;
+    background-color: white;
+    text-align: center;
+}
+
+
 
 @media screen and (min-width: 768px) {
 
@@ -441,7 +576,8 @@ header#bandeau #titre-principal #subtitle h3{
         width: 90%;
         /* background-color: yellow; */
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
+        position: relative;
     }
     
     header#bandeau #nav-bandeau #menu-bandeau #menu{
@@ -453,10 +589,10 @@ header#bandeau #titre-principal #subtitle h3{
         /* background-color: rgb(25, 85, 250); */
         background: none;
         top: 0;
-        text-align: right;
+        text-align: left;
         box-sizing: border-box;
         /* padding-right: 25px; */
-        width: 90%;
+        width: 85%;
         padding-left: 20px;
         padding-top: 0;
         height: 100%;
@@ -467,7 +603,7 @@ header#bandeau #titre-principal #subtitle h3{
     header#bandeau #nav-bandeau #menu-bandeau #menu li{
         /* background: red; */
         padding: 22px 0;
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     
     header#bandeau #nav-bandeau #menu-bandeau #menu li:last-child{
@@ -476,11 +612,11 @@ header#bandeau #titre-principal #subtitle h3{
         /* padding-top: 5px; */
         /* margin-bottom: 20px; */
         margin-top: 3px;
-        /* text-align: center; */
+        text-align: right;
         position: relative;
         bottom: 0;
-        width: 20%;
-        right: 0;
+        width: auto;
+        padding-right: 20px;
         /* right: 30px; */
         /* background-color: red; */
         
@@ -489,7 +625,7 @@ header#bandeau #titre-principal #subtitle h3{
     header#bandeau #nav-bandeau #menu-bandeau #menu li:last-child a:first-child{
         background: white;
         color: black;
-        padding: 5px 12px;
+        padding: 3px 8px;
         border-radius: 15px;
         margin-right: 10px;
     }
@@ -502,7 +638,7 @@ header#bandeau #titre-principal #subtitle h3{
     
     header#bandeau #nav-bandeau #menu-bandeau #menu li:last-child a{
         border: 1px solid white;
-        padding: 5px 12px;
+        padding: 3px 8px;
         border-radius: 15px;
     }
     
@@ -510,42 +646,216 @@ header#bandeau #titre-principal #subtitle h3{
         background: white;
         color: black;
     }
+
+
     
-    header#bandeau #nav-bandeau #menu-bandeau #menu a{
-        color: rgb(238, 238, 238);
-        transition: 0.3s;
-    }
+/* -------------------------------- contenu home / about home --------------------- */
+
+#contenu .container #creations-home, #contenu .container #about-home{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 20px 40px;
+    margin: 0 auto;
+    /* background-color: blueviolet; */
+}
+
+#contenu .container #about-home{
+    flex-direction: row-reverse;
+}
+
+#contenu .container #creations-home h2, #contenu .container #about-home h2{
+    /* background-color: red; */
+    width: 100%;
+    text-align: center;
+}
+
+#contenu .container #creations-home p, #contenu .container #about-home p{
+    text-align: center;
+    /* background-color: yellow; */
+    width: 80%;
+    margin: 40px auto;
+}
+
+#contenu .container #creations-home figure, #contenu .container #about-home figure{
+    width: 40%;
+    max-height: 50vh;
+    overflow: hidden;
+    border-radius: 5px;
+    margin-top: 0;
+}
+
+#contenu .container #creations-home figure img, #contenu .container #about-home figure img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#contenu .container #creations-home #texte-creation, #contenu .container #about-home #texte-creation{
+    margin-top: 130px;
+    width: 60%;
+}
     
-    header#bandeau #nav-bandeau #menu-bandeau #menu a:hover{
-        color: rgb(160, 160, 160);
-    }
+#contenu .container #creations-home #texte-creation p:last-child, #contenu .container #about-home #texte-creation p:last-child{
+    position: relative;
+    /* margin: 140px auto; */
+    padding-top: 100px;
+}
+
+
+/* --------------------- réparations home / contact home---------------------- */
+
+#contenu .container #reparations-home{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+    background: url(../img/repa.png) no-repeat center;
+    background-size: cover;
+    color: rgb(243, 243, 243);
+}
+
+#contenu .container #reparations-home h2{
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#contenu .container #reparations-home p, #contenu .container #contact-home p{
+    width: 65%;
+    text-align: center;
+    padding: 50px 0;
+    line-height: 1.5rem;
+    font-size: 1.2rem;
+}
+
+#contenu .container #contact-home{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+    background: url(../img/contact.jpg) no-repeat center;
+    background-size: cover;
+    color: rgb(243, 243, 243);
+    margin-bottom: 50px;
+}
+
+
+/* -------------------- footer -------------------------  */
+
+#footer .container{
+    width: 100%;
+    height: 100vh;
+    background-color: #181818;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+#footer .container img{
+    width: 80%;
+    margin: 50px auto 0;
+}
+
+#footer .container #nav-footer{
+    width: 50%;
+    box-sizing: border-box;
+}
+
+#footer .container #nav-footer #menu-footer li{
+    padding: 15px 0;
+}
+
+#footer .container #nav-footer #menu-footer li a{
+    color: white;
+}
+
+#footer .container #reseaux{
+    width: 50%;
+    margin-top: -55px;
+    margin-right: 0;
     
-    header#bandeau #nav-bandeau #menu-bandeau input[type=checkbox]:checked + #menu{
-        display: block;
-    }
-    
-    header#bandeau #titre-principal{
-        margin-top: 55vh;
-    }
-    
-    header#bandeau #titre-principal h1{
-        background-color: rgb(245, 245, 245);
-        width: 200px;
-        padding: 5px 20px;
-    }
-    
-    header#bandeau #titre-principal #subtitle{
-        background: url(../img/h3back.png) no-repeat;
-        color: white;
-        height: 30px;
-        /* border: 1px solid red; */
-        /* width: 50%; */
-        margin-left: -40px;
-    }
-    
-    header#bandeau #titre-principal #subtitle h3{
-        margin: auto 0;
-        margin-left: 95px;
-        padding: 6px 0;
-    }
+}
+
+#footer .container #reseaux a {
+    color: white;
+    margin: 0 15px;
+}
+
+
+#footer .container #mentions-footer, #footer .container #mentions-footer a{
+    width: 100%;
+    color: #A5A5A5;
+    text-align: center;
+}
+
+
+/* ------------------------------- contact ---------------------------  */
+#contenu #contact{
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 40px auto;
+}
+
+#contenu #contact label{
+    font-size: 0.8rem;
+    color: #525252;
+}
+
+#contenu #contact input, #contenu #contact textarea{
+    width: 100%;
+    padding: 6px 4px;
+    border: none;
+    border: 0.5px rgb(173, 171, 171) solid;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#contenu #contact #validate-form{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#contenu #contact #validate-form #validate{
+    width: 10%;
+    margin: auto 0 auto 10px;
+    cursor: pointer;
+
+}
+
+#contenu #contact #validate-form #validate-label{
+    /* background-color: red; */
+    /* text-align: right; */
+    display: block;
+    width: 80%;
+    font-size: 0.66rem;
+    cursor: pointer;
+
+}
+
+#contenu #contact button{
+    padding: 10px 18px;
+}
+
+
 }

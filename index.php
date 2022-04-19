@@ -3,6 +3,8 @@
 session_start();
 
 require_once __DIR__ . '/vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
 
 // On va appeler la classe ControllerFront qu'on va stocker dans une variable et utiliser dans le cas où une action est réalisée sur le site 
 try{
