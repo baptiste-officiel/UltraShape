@@ -17,7 +17,7 @@ class ContactModel extends Manager{
     // Compter les mails 
     public function countMail(){
         $bdd = $this->dbConnect();
-        $req = $bdd->prepare('SELECT COUNT(`email`) FROM contact WHERE id');
+        $req = $bdd->prepare('SELECT COUNT(`email`) FROM contact');
         $req->execute(array());
         return $req;
     }
@@ -25,7 +25,8 @@ class ContactModel extends Manager{
     // Aller chercher tous les mails 
     public function getMails(){
         $bdd = $this->dbConnect();
-        $req = $bdd->query('SELECT * FROM contact WHERE id');
+        $req = $bdd->prepare('SELECT * FROM contact');
+        $req->execute(array());
         return $req;
     }
 

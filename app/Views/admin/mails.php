@@ -22,7 +22,7 @@
         <td><?= htmlspecialchars($allMail['email']); ?></td>
         <td><?= htmlspecialchars($allMail['object']); ?></td>
         <td><?= htmlspecialchars($allMail['content']); ?></td>
-        <td><a href="indexAdmin.php?action=deleteMail">Delete</a></td>
+        <td><a href="indexAdmin.php?action=deleteMail&id=<?= $allMail['id']; ?>">Delete</a></td>
     </tr>
     
     <?php } ?>

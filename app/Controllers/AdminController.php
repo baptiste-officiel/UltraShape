@@ -48,6 +48,14 @@ class AdminController{
         }
     }
 
+    // Accès au compte 
+    public function compte($id){
+        $userManager = new \Projet\Models\AdminModel();
+        $compte = $userManager->compte($id);
+
+        require 'app/Views/admin/compte.php';
+    }
+
     // Affichage des mails de contact récupérés dans la db 
     public function showMails(){
         $mails = new \Projet\Models\ContactModel();
@@ -59,16 +67,21 @@ class AdminController{
     // affichage du dashboard 
     public function dashboard(){
         $countMail = new \Projet\Models\ContactModel();
+        
+
         $nbMail = $countMail->countMail();
         
+
         require 'app/Views/admin/dashboard.php';
     }
 
     // Suppression de mail 
     public function deleteMail($id){
-        $deleteMail = new \Projet\Models\ContactModel;
+        $deleteMail = new \Projet\Models\ContactModel();
+        
         $deleteMail = $deleteMail->deleteMail($id);
+        
 
-        header('Location : indexAdmin.php?action=showMails');
+        header('Location: indexAdmin.php?action=showMails');
     }
 }

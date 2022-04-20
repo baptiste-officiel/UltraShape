@@ -19,4 +19,15 @@ class AdminModel extends Manager{
 
         return $req;
     }
+
+    public function compte($id)
+    {
+        $bdd = $this->dbConnect();
+        $req = $bdd->prepare('SELECT firstname, mail FROM administrateurs WHERE id = ?');
+        $req->execute(array($id));
+        return $req->fetch();
+      
+
+        return $req;
+    }
 }

@@ -48,6 +48,12 @@ try{
             }
         }
 
+        // Accès au compte 
+        if ($_GET['action'] == 'compte'){
+            $id = $_GET['id'];
+            $adminController->compte($id);
+        }
+
         // Affichage des mails 
         if ($_GET['action'] == 'showMails'){
             $adminController->showMails();
@@ -62,7 +68,7 @@ try{
         // Déconnexion admin 
         elseif ($_GET['action'] == 'deconnexion'){
             session_destroy();
-            header('Location: index.php');
+            header('Location: indexAdmin.php');
         }
 
 

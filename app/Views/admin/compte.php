@@ -3,11 +3,11 @@
 <div id="contenuDashboard">
     <!-- <div class="container"> -->
     <div id="liens-compte">
-        <a href="indexAdmin.php?action=compte&id=<?= $_SESSION['id']; ?>" class="bouton-noir">Mon compte</a>
         <a href="indexAdmin.php?action=deconnexion">Déconnexion</a>
     </div>
     <nav id="menuAdmin">
         <h1>Coucou <?= $_SESSION['firstname'] ?></h1>
+        
 
         <ul id="menuAd">
             <li><a href="indexAdmin.php?action=showMails">Mails
