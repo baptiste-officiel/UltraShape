@@ -3,7 +3,7 @@
 <div id="contenuDashboard">
     <!-- <div class="container"> -->
     <div id="liens-compte">
-        <a href="indexAdmin.php?action=compte&id=<?= $_SESSION['id']; ?>" class="bouton-noir">Mon compte</a>
+        <a href="indexAdmin.php?action=compte&id=<?= $_SESSION['id']; ?>" class="bouton-noir" id="lien-compte">Mon compte</a>
         <a href="indexAdmin.php?action=deconnexion">Déconnexion</a>
     </div>
     <nav id="menuAdmin">

@@ -54,6 +54,11 @@ try{
             $adminController->compte($id);
         }
 
+        // Modifier compte 
+        if ($_GET['action'] == 'editCompte'){
+            
+        }
+
         // Affichage des mails 
         if ($_GET['action'] == 'showMails'){
             $adminController->showMails();

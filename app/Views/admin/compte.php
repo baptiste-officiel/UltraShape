@@ -7,13 +7,10 @@
     </div>
     <nav id="menuAdmin">
         <h1>Coucou <?= $_SESSION['firstname'] ?></h1>
-        
+        <p>Ton adresse mail : <?= $_SESSION['mail']; ?></p>
+        <a href="indexAdmin.php?action=editCompte">Modifier mon compte</a>
 
-        <ul id="menuAd">
-            <li><a href="indexAdmin.php?action=showMails">Mails
-                    <?php $mails = $nbMail->fetch(); ?>(<?= $mails[0]; ?>)</a></li>
-            <!-- <li><a href="">Articles</a></li> -->
-        </ul>
+    
     </nav>
 
     <!-- </div> -->

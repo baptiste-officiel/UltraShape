@@ -544,7 +544,7 @@ header#bandeau #titre-principal #subtitle h3{
     font-size: 0.8rem;
 }
 
-#contenuDashboard #liens-compte a:first-child{
+#contenuDashboard #liens-compte #lien-compte{
     color: white;
     background-color: black;
     margin-right: 15px;
