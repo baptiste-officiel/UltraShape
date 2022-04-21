@@ -23,4 +23,8 @@ class ControllerFront{
             header('Location: app/Views/front/error.php');
         }
     }
+
+    function aboutFront(){
+        require 'app/Views/front/about.php';
+    }
 }

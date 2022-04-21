@@ -71,6 +71,7 @@ header#bandeau{
     background: url(../img/fond-mobile.jpg) no-repeat center;
     background-size: cover;
     height: 100vh;
+    position: relative;
 }
 
 header#bandea #nav-bandeau{
@@ -194,7 +195,7 @@ header#bandeau #titre-principal{
 }
 
 header#bandeau #titre-principal h1{
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(255, 255, 255);
     width: 200px;
     padding: 5px 20px;
 }
@@ -202,18 +203,15 @@ header#bandeau #titre-principal h1{
 header#bandeau #titre-principal #subtitle{
     background: url(../img/h3back.png) no-repeat;
     color: white;
-    height: 30px;
+    height: 24px;
+    /* text-align: center; */
     /* border: 1px solid red; */
-    /* width: 50%; */
+    /* width: 200px; */
     margin-left: -40px;
+    /* margin-left: 95px; */
+    padding: 5px 0 0 90px;
+    /* margin-top: -5px; */
 }
-
-header#bandeau #titre-principal #subtitle h3{
-    margin: auto 0;
-    margin-left: 95px;
-    padding: 6px 0;
-}
-
 
 /* -------------------------------- contenu home / about home --------------------- */
 
@@ -255,7 +253,7 @@ header#bandeau #titre-principal #subtitle h3{
 }
 
 
-#contenu .container #creations-home #texte-creation p:last-child, #contenu .container #about-home #texte-creation p:last-child{
+#contenu .container #creations-home #texte-creation p:last-child, #contenu .container #about-home #texte-about p:last-child{
     position: absolute;
     bottom: 55px; 
     text-align: center;
@@ -268,7 +266,7 @@ header#bandeau #titre-principal #subtitle h3{
 
 /* --------------------- réparations home / contact home---------------------- */
 
-#contenu .container #reparations-home{
+#contenu #reparations-home{
     height: 100vh;
     width: 100%;
     display: flex;
@@ -283,13 +281,13 @@ header#bandeau #titre-principal #subtitle h3{
     color: rgb(243, 243, 243);
 }
 
-#contenu .container #reparations-home p, #contenu .container #contact-home p{
+#contenu #reparations-home p, #contenu #contact-home p{
     width: 85%;
     text-align: center;
     padding: 50px 0;
 }
 
-#contenu .container #contact-home{
+#contenu #contact-home{
     height: 100vh;
     width: 100%;
     display: flex;
@@ -358,19 +356,41 @@ header#bandeau #titre-principal #subtitle h3{
 
 
 /* ------------------------------- contact ---------------------------  */
-#contenu #contact{
+#contenu-contact #contact{
     width: 80%;
     display: flex;
     flex-wrap: wrap;
     margin: 40px auto;
 }
 
-#contenu #contact label{
+#contenu-contact #texte-contact{
+    background-color: rgb(252, 252, 252);
+}
+
+#contenu-contact p:first-child{
+    padding-top: 50px;
+}
+
+#contenu-contact p:last-child{
+    padding-bottom: 40px;
+}
+
+#contenu-contact p:first-child::first-line{
+    font-weight: 600;
+}
+
+#contenu-contact p{
+    line-height: 1.8rem;
+    width: 80%;
+    
+}
+
+#contenu-contact #contact label{
     font-size: 0.8rem;
     color: #525252;
 }
 
-#contenu #contact input, #contenu #contact textarea{
+#contenu-contact #contact input, #contenu-contact #contact textarea{
     width: 100%;
     padding: 6px 4px;
     border: none;
@@ -379,7 +399,7 @@ header#bandeau #titre-principal #subtitle h3{
     margin-bottom: 15px;
 }
 
-#contenu #contact #validate-form{
+#contenu-contact #contact #validate-form{
     width: 100%;
     margin-top: 20px;
     display: flex;
@@ -387,14 +407,14 @@ header#bandeau #titre-principal #subtitle h3{
     align-items: center;
 }
 
-#contenu #contact #validate-form #validate{
+#contenu-contact #contact #validate-form #validate{
     width: 10%;
     margin: auto 0 auto 10px;
     cursor: pointer;
 
 }
 
-#contenu #contact #validate-form #validate-label{
+#contenu-contact #contact #validate-form #validate-label{
     /* background-color: red; */
     /* text-align: right; */
     display: block;
@@ -404,9 +424,9 @@ header#bandeau #titre-principal #subtitle h3{
 
 }
 
-#contenu #contact button{
+#contenu-contact #contact button{
     display: block;
-    margin: 40px auto 0;
+    margin: 40px auto 60px;
     background: none;
     border: none;
     background-color: #2c80e7;
@@ -420,10 +440,26 @@ header#bandeau #titre-principal #subtitle h3{
     cursor: pointer;
 }
 
-#contenu #contact button:hover{
+#contenu-contact #contact button:hover{
     background-color: #2264B5;
 }
 
+#contenu-contact #contact #coordonnes-contact{
+    width: 100%;
+}
+
+#contenu-contact #contact #coordonnes-contact a{
+    margin: 10px 0;
+    display: block;
+ }
+ 
+ #contenu-contact #contact #coordonnes-contact address{
+     margin-bottom: 10px;
+ }
+ 
+ #contenu-contact #contact #coordonnes-contact iframe{
+     width: 100%;
+ }
 
 /* --------------------- confirmContact -------------------------  */
 
@@ -437,6 +473,33 @@ header#bandeau #titre-principal #subtitle h3{
 #confirmContact .container p{
     margin: 50px auto;
     width: 90%;
+}
+
+/* -------------------------------------- about -------------------------------  */
+#contenu-about .container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#contenu-about .container img{
+    width: 100%;
+}
+
+#contenu-about .container h2{
+    text-align: center;
+    width: 100%;
+    margin: 25px 0;
+}
+
+#contenu-about .container p{
+    width: 85%;
+    text-align: justify;
+    margin: 0 auto 10px;
+}
+
+#contenu-about .container p:last-child{
+    margin-bottom: 30px;
 }
 
 
@@ -671,6 +734,10 @@ header#bandeau #titre-principal #subtitle h3{
     header#bandeau {
         background: url(../img/fond-desktop.jpg) no-repeat center;
         background-size: cover;
+        height: 65vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     header#bandeau #bande{
@@ -762,7 +829,27 @@ header#bandeau #titre-principal #subtitle h3{
         color: black;
     }
 
+    header#bandeau #titre-principal{
+        margin-bottom: -50px;
+        margin-top: 0;
 
+    }
+    
+    header#bandeau #titre-principal h1{
+        background-color: rgb(255, 255, 255);
+        width: 250px;
+        padding: 25px 20px 25px 40px;
+        box-shadow: 0 0 2px black;
+        border-radius: 2px;
+    }
+    
+    header#bandeau #titre-principal #subtitle{
+        margin-left: 0;
+        /* margin-left: 95px; */
+        padding: 5px 0 0 70px;
+        /* margin-top: -5px; */
+       
+    }
     
 /* -------------------------------- contenu home / about home --------------------- */
 
@@ -811,12 +898,12 @@ header#bandeau #titre-principal #subtitle h3{
     border-radius: 5px;
 }
 
-#contenu .container #creations-home #texte-creation, #contenu .container #about-home #texte-creation{
+#contenu .container #creations-home #texte-creation, #contenu .container #about-home #about{
     margin-top: 130px;
     width: 60%;
 }
     
-#contenu .container #creations-home #texte-creation p:last-child, #contenu .container #about-home #texte-creation p:last-child{
+#contenu .container #creations-home #texte-creation p:last-child, #contenu .container #about-home #texte-about p:last-child{
     position: relative;
     /* margin: 140px auto; */
     padding-top: 100px;
@@ -825,7 +912,7 @@ header#bandeau #titre-principal #subtitle h3{
 
 /* --------------------- réparations home / contact home---------------------- */
 
-#contenu .container #reparations-home{
+#contenu #reparations-home{
     height: 60vh;
     width: 100%;
     display: flex;
@@ -835,26 +922,27 @@ header#bandeau #titre-principal #subtitle h3{
     box-sizing: border-box;
     padding: 0;
     margin: 0 auto;
-    background: url(../img/repa.png) no-repeat center;
+    background: url(../img/repa.jpg) no-repeat center;
     background-size: cover;
     color: rgb(243, 243, 243);
 }
 
-#contenu .container #reparations-home h2{
+#contenu #reparations-home h2{
     width: 100%;
     text-align: center;
     font-size: 2rem;
 }
 
-#contenu .container #reparations-home p, #contenu .container #contact-home p{
+#contenu #reparations-home p, #contenu #contact-home p{
     width: 65%;
+    max-width: 800px;
     text-align: center;
     padding: 50px 0;
     line-height: 1.5rem;
     font-size: 1.2rem;
 }
 
-#contenu .container #contact-home{
+#contenu #contact-home{
     height: 60vh;
     width: 100%;
     display: flex;
@@ -864,7 +952,7 @@ header#bandeau #titre-principal #subtitle h3{
     box-sizing: border-box;
     padding: 0;
     margin: 0 auto;
-    background: url(../img/contact.jpg) no-repeat center;
+    background: url(../img/contact-desk.jpg) no-repeat center;
     background-size: cover;
     color: rgb(243, 243, 243);
     margin-bottom: 50px;
@@ -873,68 +961,43 @@ header#bandeau #titre-principal #subtitle h3{
 
 /* -------------------- footer -------------------------  */
 
-#footer .container{
+#footer{
     width: 100%;
     height: 100vh;
     background-color: #181818;
+
+}
+
+/* ------------------------------- contact ---------------------------  */
+#contenu-contact #contact{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    text-align: center;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    margin: 40px auto 40px;
 }
 
-#footer .container img{
-    width: 80%;
-    margin: 50px auto 0;
+#contenu-contact p:first-child{
+    padding-top: 100px;
 }
 
-#footer .container #nav-footer{
+#contenu-contact p{
+    line-height: 1.8rem;
     width: 50%;
-    box-sizing: border-box;
-}
-
-#footer .container #nav-footer #menu-footer li{
-    padding: 15px 0;
-}
-
-#footer .container #nav-footer #menu-footer li a{
-    color: white;
-}
-
-#footer .container #reseaux{
-    width: 50%;
-    margin-top: -55px;
-    margin-right: 0;
     
 }
 
-#footer .container #reseaux a {
-    color: white;
-    margin: 0 15px;
+#contenu-contact #contact #contact-form, #contenu-contact #contact #coordonnes-contact{
+    width: 40%;
 }
 
-
-#footer .container #mentions-footer, #footer .container #mentions-footer a{
-    width: 100%;
-    color: #A5A5A5;
-    text-align: center;
-}
-
-
-/* ------------------------------- contact ---------------------------  */
-#contenu #contact{
-    width: 45%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 40px auto;
-}
-
-#contenu #contact label{
+#contenu-contact #contact label{
     font-size: 0.8rem;
     color: #525252;
 }
 
-#contenu #contact input, #contenu #contact textarea{
+#contenu-contact #contact input, #contenu #contact textarea{
     width: 100%;
     padding: 6px 4px;
     border: none;
@@ -943,7 +1006,7 @@ header#bandeau #titre-principal #subtitle h3{
     margin-bottom: 15px;
 }
 
-#contenu #contact #validate-form{
+#contenu-contact #contact #validate-form{
     width: 100%;
     margin-top: 20px;
     display: flex;
@@ -951,14 +1014,14 @@ header#bandeau #titre-principal #subtitle h3{
     align-items: center;
 }
 
-#contenu #contact #validate-form #validate{
+#contenu-contact #contact #validate-form #validate{
     width: 10%;
     margin: auto 0 auto 10px;
     cursor: pointer;
 
 }
 
-#contenu #contact #validate-form #validate-label{
+#contenu-contact #contact #validate-form #validate-label{
     /* background-color: red; */
     /* text-align: right; */
     display: block;
@@ -968,8 +1031,49 @@ header#bandeau #titre-principal #subtitle h3{
 
 }
 
-#contenu #contact button{
+#contenu-contact #contact button{
     padding: 10px 18px;
+}
+
+#contenu-contact #contact #coordonnes-contact a{
+   margin: 10px 0;
+   display: block;
+}
+
+#contenu-contact #contact #coordonnes-contact address{
+    margin-bottom: 10px;
+}
+
+#contenu-contact #contact #coordonnes-contact iframe{
+    width: 100%;
+}
+
+/* -------------------------------------- about -------------------------------  */
+#contenu-about .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 80px 0 40px;
+}
+
+#contenu-about .container img{
+    width: 40%;
+    height: auto;
+}
+
+#contenu-about .container #about-text{
+    width: 60%;
+}
+
+#contenu-about .container #about-text h2{
+    margin-bottom: 40px;
+}
+
+#contenu-about .container #about-text p{
+    width: 80%;
+    margin: 10px auto 10px;
 }
 
 

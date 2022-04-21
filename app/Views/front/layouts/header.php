@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,11 +40,11 @@
                 </div>
             </nav>
             </div>
-            <div id="titre-principal">
+            <div id="titre-principal" class="container">
                 <h1>Ultra Shape</h1>
-            <div id="subtitle">
-            <h3>Artisan Shaper</h3>
-            </div>
+            
+            <h3 id="subtitle">Artisan Shaper</h3>
+            
             </div>
         
     </header>

@@ -16,6 +16,8 @@ require_once 'layouts/header.php';
                 <img src="./app/Public/front/img/creations.jpg" alt="Créations">
             </figure>
         </section>
+        </div>
+
 
         <section id="reparations-home">
             <h2>Réparations</h2>
@@ -24,17 +26,19 @@ require_once 'layouts/header.php';
             <a class="bouton-blanc" href="index.php?action=reparations">Voir tout</a>
         </section>
 
-        <section id="about-home">
-            <div id="texte-creation">
+        <div class="container">
+<section id="about-home">
+            <div id="texte-about">
                 <h2>A propos</h2>
                 <p>L’histoire de l’atelier et du shaper, le palmarès..</p>
                 <p><a class="bouton-noir" href="index.php?action=about">Voir tout</a></p>
             </div>
             <!-- img  -->
             <figure>
-                <img src="./app/Public/front/img/atelier.jpg" alt="Atelier">
+                <img src="./app/Public/front/img/shop.jpg" alt="Atelier">
             </figure>
         </section>
+</div>
 
         <section id="contact-home">
             <h2>Contact</h2>
@@ -42,7 +46,6 @@ require_once 'layouts/header.php';
                 demande avec grand plaisir !</p>
             <a class="bouton-blanc" href="index.php?action=contact">Nous contacter</a>
         </section>
-    </div>
 </div>
 
 <?php

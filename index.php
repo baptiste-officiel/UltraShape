@@ -31,9 +31,9 @@ try{
         // elseif($_GET['action'] == 'reparations'){
         //     $controllerFront->reparationsFront();
         // }
-        // elseif($_GET['action'] == 'about'){
-        //     $controllerFront->aboutFront();
-        // }
+        elseif($_GET['action'] == 'about'){
+            $controllerFront->aboutFront();
+        }
     } else{
         $controllerFront->home();
     }
