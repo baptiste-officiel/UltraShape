@@ -6,10 +6,10 @@ require_once './app/Views/admin/layouts/headerAdmin.php';
     <div class="container">
         <section id="pageConnexionAdmin">
             <h1>Inscription Administrateur</h1>
-            <form action="indexAdmin.php?action=createAdmin" method="post">
+            <form action="indexAdmin.php?action=createAdmin" method="post" id="createAdminForm">
                 <input type="text" name="firstname" id="firstname" placeholder="Votre nom">
                 <input type="text" name="mail" id="mail" placeholder="Votre mail">
-                <input type="text" name="password" id="password" placeholder="Mot de passe">
+                <input type="password" name="password" id="password" placeholder="Mot de passe">
                 <button type="submit">Inscription</button>
             </form>
 

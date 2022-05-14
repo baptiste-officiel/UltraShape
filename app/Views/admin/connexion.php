@@ -6,9 +6,9 @@ require_once './app/Views/admin/layouts/headerAdmin.php';
     <div class="container">
         <section id="pageConnexionAdmin">
             <h1>Connexion Administrateur</h1>
-            <form action="indexAdmin.php?action=connexionAdmin" method="post">
+            <form action="indexAdmin.php?action=connexionAdmin" method="post" id="connectAdminForm">
                 <input type="text" name="mail" id="mail" placeholder="Mail administrateur">
-                <input type="text" name="password" id="password" placeholder="Mot de passe">
+                <input type="password" name="password" id="password" placeholder="Mot de passe">
                 <button type="submit">Connexion</button>
             </form>
 

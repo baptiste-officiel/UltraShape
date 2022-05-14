@@ -12,6 +12,8 @@
 
     
     </nav>
+    <a class="bouton-noir" id="returnFromCompte" href="indexAdmin.php?action=dashboard">Retour</a>
+
 
     <!-- </div> -->
 </div>

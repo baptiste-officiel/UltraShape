@@ -602,6 +602,10 @@ header#bandeau #titre-principal #subtitle{
     right: 50px;
 }
 
+#contenuDashboard #returnFromCompte{
+    display: block;
+}
+
 #contenuDashboard #liens-compte a{
     color: black;
     font-size: 0.8rem;
@@ -611,6 +615,11 @@ header#bandeau #titre-principal #subtitle{
     color: white;
     background-color: black;
     margin-right: 15px;
+}
+
+#contenuDashboard #liens-compte #lien-compte:hover{
+    background: none;
+    color: black;
 }
 
 #contenuDashboard #deco:hover{
@@ -898,7 +907,7 @@ header#bandeau #titre-principal #subtitle{
     border-radius: 5px;
 }
 
-#contenu .container #creations-home #texte-creation, #contenu .container #about-home #about{
+#contenu .container #creations-home #texte-creation, #contenu .container #about-home #texte-about{
     margin-top: 130px;
     width: 60%;
 }
@@ -906,7 +915,7 @@ header#bandeau #titre-principal #subtitle{
 #contenu .container #creations-home #texte-creation p:last-child, #contenu .container #about-home #texte-about p:last-child{
     position: relative;
     /* margin: 140px auto; */
-    padding-top: 100px;
+    margin-top: 100px;
 }
 
 
@@ -960,12 +969,58 @@ header#bandeau #titre-principal #subtitle{
 
 
 /* -------------------- footer -------------------------  */
-
 #footer{
     width: 100%;
-    height: 100vh;
+    /* height: 50vh; */
     background-color: #181818;
+}
 
+#footer .container{
+    width: 100%;
+    height: 50vh;
+    background-color: #181818;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+#footer .container img{
+    width: 40%;
+}
+
+#footer .container #nav-footer{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#footer .container #nav-footer #menu-footer li{
+    padding: 15px 0;
+}
+
+#footer .container #nav-footer #menu-footer li a{
+    color: white;
+}
+
+#footer .container #reseaux{
+    width: 100%;
+}
+
+#footer .container #reseaux a {
+    color: white;
+    margin: 0 15px;
+}
+
+#footer .container #reseaux img{
+    width: 30px;
+    height: auto;
+    vertical-align: middle;
+}
+
+#footer .container #mentions-footer, #footer .container #mentions-footer a{
+    width: 100%;
+    color: #A5A5A5;
+    text-align: center;
 }
 
 /* ------------------------------- contact ---------------------------  */
@@ -1074,6 +1129,17 @@ header#bandeau #titre-principal #subtitle{
 #contenu-about .container #about-text p{
     width: 80%;
     margin: 10px auto 10px;
+}
+
+
+/* --------------------- admin ------------------------------------  */
+
+#contenuAdmin #pageConnexionAdmin{
+    width: 60%;
+}
+
+#contenuAdmin #pageConnexionAdmin form{
+    width: 60%;
 }
 
 
