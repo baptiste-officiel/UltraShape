@@ -21,6 +21,8 @@
     </div>
 </footer>
 
+<script src="./app/Public/front/js/script.js"></script>
+
 </body>
 
 </html>

@@ -365,6 +365,7 @@ header#bandeau #titre-principal #subtitle{
 
 #contenu-contact #texte-contact{
     background-color: rgb(252, 252, 252);
+
 }
 
 #contenu-contact p:first-child{
@@ -382,12 +383,21 @@ header#bandeau #titre-principal #subtitle{
 #contenu-contact p{
     line-height: 1.8rem;
     width: 80%;
-    
+    padding-top: 15px;
+    line-height: 2rempx;
 }
 
-#contenu-contact #contact label{
+#contenu-contact #contact .input-form, #contenu-contact #contact .input-form .anim-input{
+    /* position: relative; */
+    /* margin-top: -20px; */
+}
+
+#contenu-contact #contact .input-form .anim-input label{
     font-size: 0.8rem;
     color: #525252;
+    /* position: absolute; */
+    /* top: 5%; */
+    padding: 6px 4px;
 }
 
 #contenu-contact #contact input, #contenu-contact #contact textarea{
@@ -452,6 +462,11 @@ header#bandeau #titre-principal #subtitle{
     margin: 10px 0;
     display: block;
  }
+
+ #contenu-contact #contact #coordonnes-contact #telephone{
+     /* background-color: blueviolet; */
+     display: inline-block;
+ } 
  
  #contenu-contact #contact #coordonnes-contact address{
      margin-bottom: 10px;
@@ -735,7 +750,18 @@ header#bandeau #titre-principal #subtitle{
 }
 
 
+/* --------------------------- compte ----------------------- */
+#contenuDashboard #menuModifAdmin{
+    display: flex;
+    flex-wrap: wrap;
 
+}
+
+#contenuDashboard #menuModifAdmin h1, #contenuDashboard #menuModifAdmin p{
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+}
 
 
 @media screen and (min-width: 768px) {

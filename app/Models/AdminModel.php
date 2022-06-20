@@ -25,9 +25,18 @@ class AdminModel extends Manager{
         $bdd = $this->dbConnect();
         $req = $bdd->prepare('SELECT firstname, mail FROM administrateurs WHERE id = ?');
         $req->execute(array($id));
-        return $req->fetch();
-      
 
-        return $req;
+        return $req->fetch();
+    }
+
+
+    public function modifPseudo($firstname, $id)
+    {
+        $bdd = $this->dbConnect();
+        $req = $bdd->prepare('UPDATE administrateurs SET firstname = :firstname WHERE id = :id');
+        $req->execute(array(
+            ":firstname" => $firstname,
+            ":id" => $id
+        ));
     }
 }

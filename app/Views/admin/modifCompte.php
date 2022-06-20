@@ -6,9 +6,10 @@
         <a href="indexAdmin.php?action=deconnexion">Déconnexion</a>
     </div>
     <nav id="menuModifAdmin">
-        <h1>Coucou <?= $_SESSION['firstname'] ?></h1>
-        <p>Ton adresse mail : <?= $_SESSION['mail']; ?></p>
-        <a href="indexAdmin.php?action=editCompte&id=<?= $_SESSION['id']; ?>">Modifier mon compte</a>
+        <h1>Nouveau nom</h1>
+        <form method="post" action="indexAdmin.php?action=editPseudo&id=<?= $_SESSION['id']; ?>">
+        <input type="text" name="firstname" id="firstname" value="<?= $_SESSION['firstname']; ?>">
+        <button type="submit">Valider</button>
 
     
     </nav>

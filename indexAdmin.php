@@ -56,7 +56,14 @@ try{
 
         // Modifier compte 
         if ($_GET['action'] == 'editCompte'){
-            
+            $adminController->modifCompte();
+        }
+
+        if($_GET['action'] == 'editPseudo'){
+            $id = $_GET['id'];
+            $firstname = $_POST['firstname'];
+
+            $adminController->modificationPseudo($id, $firstname);
         }
 
         // Affichage des mails 

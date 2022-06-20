@@ -13,22 +13,32 @@ require_once 'layouts/header.php';
 
 
 
-        <form action="index.php?action=contactPost" method="post" id="contact-form">
+        <form action="index.php?action=contactPost" method="post" id="contact-form" class="input-form">
 
+            <div class="anim-input">
             <label for="lastname">Nom*</label>
             <input type="text" name="lastname" id="lastname">
+            </div>
 
+            <div class="anim-input">
             <label for="firstname">Prénom*</label>
             <input type="text" name="firstname" id="firstname">
+            </div>
 
+            <div class="anim-input">
             <label for="email">Email*</label>
             <input type="email" name="email" id="email">
+            </div>
 
+            <div class="anim-input">
             <label for="object">Objet de la demande</label>
             <input type="text" name="object" id="object">
+            </div>
 
+            <div class="anim-input">
             <label for="content">Message*</label>
             <textarea name="content" id="content" cols="30" rows="10"></textarea>
+            </div>
 
             <div id="validate-form">
             <input type="checkbox" name="validate" id="validate">
@@ -40,7 +50,7 @@ require_once 'layouts/header.php';
 
     <div id="coordonnes-contact">
     <h2>Ultra Shape</h2>
-        <a href="tel:+33238325260">02 38 32 52 60</a>
+        <a href="tel:+33238325260" id="telephone">02 38 32 52 60</a>
         <address>
         56000 VANNES
         </address>

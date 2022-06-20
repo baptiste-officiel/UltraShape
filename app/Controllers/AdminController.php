@@ -14,6 +14,12 @@ class AdminController{
     public function createAdmin($firstname, $mail, $mdp){
         $userManager = new \Projet\Models\AdminModel();
         $user = $userManager->createAdmin($firstname, $mdp, $mail);
+
+        require 'app/Views/admin/connexion.php';
+        // header ('Location: indexAdmin.php?action=dashboard');
+
+
+
     }
 
     // page de connexion administrateur 
@@ -83,5 +89,22 @@ class AdminController{
         
 
         header('Location: indexAdmin.php?action=showMails');
+    }
+
+
+    // Modification compte 
+    public function modifCompte(){
+        require 'app/Views/admin/modifCompte.php';
+    }
+
+    // Modification pseudo 
+    public function modificationPseudo($id, $firstname){
+        $modifPseudo = new \Projet\Models\AdminModel();
+        $modifPseudo = $modifPseudo->modifPseudo($id, $firstname);
+        var_dump($modifPseudo);die;
+
+        // require 'app/Views/admin/connexion.php';
+
+        header(`Location: indexAdmin.php?action=compte&id=` . $_SESSION["id"]);
     }
 }
