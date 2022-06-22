@@ -33,7 +33,7 @@ class AdminModel extends Manager{
     public function modifPseudo($firstname, $id)
     {
         $bdd = $this->dbConnect();
-        $req = $bdd->prepare('UPDATE administrateurs SET firstname = :firstname WHERE id = :id');
+        $req = $bdd->prepare('UPDATE administrateurs SET `firstname` = :firstname WHERE id = :id');
         $req->execute(array(
             ":firstname" => $firstname,
             ":id" => $id

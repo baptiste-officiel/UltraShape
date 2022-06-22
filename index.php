@@ -34,6 +34,15 @@ try{
         elseif($_GET['action'] == 'about'){
             $controllerFront->aboutFront();
         }
+
+        elseif($_GET['action'] == 'mentionsLegales'){
+            $controllerFront->mentions();
+        }
+
+        elseif($_GET['action'] == 'rgpd'){
+            $controllerFront->rgpd();
+        }
+
     } else{
         $controllerFront->home();
     }

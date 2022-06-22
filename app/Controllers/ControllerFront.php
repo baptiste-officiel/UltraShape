@@ -27,4 +27,12 @@ class ControllerFront{
     function aboutFront(){
         require 'app/Views/front/about.php';
     }
+
+    function mentions(){
+        require 'app/Views/front/mentionsLegales.php';
+    }
+
+    function rgpd(){
+        require 'app/Views/front/rgpd.php';
+    }
 }

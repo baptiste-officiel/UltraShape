@@ -8,7 +8,7 @@
     <nav id="menuModifAdmin">
         <h1>Nouveau nom</h1>
         <form method="post" action="indexAdmin.php?action=editPseudo&id=<?= $_SESSION['id']; ?>">
-        <input type="text" name="firstname" id="firstname" value="<?= $_SESSION['firstname']; ?>">
+        <input type="text" name="firstname" id="firstname" value="">
         <button type="submit">Valider</button>
 
     

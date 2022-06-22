@@ -35,7 +35,7 @@
                         <li><a href="index.php?action=reparations">Réparations</a></li>
                         <li><a href="index.php?action=about">A propos</a></li>
                         <li><a href="index.php?action=contact">Contact</a></li>
-                        <li><a href="index.php?action=connexion">Connexion</a><a href="index.php?action=inscription">Inscription</a></li>
+                        <!-- <li><a href="index.php?action=connexion">Connexion</a><a href="index.php?action=inscription">Inscription</a></li> -->
                     </ul>
                 </div>
             </nav>

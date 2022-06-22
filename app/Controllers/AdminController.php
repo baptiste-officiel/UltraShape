@@ -101,10 +101,12 @@ class AdminController{
     public function modificationPseudo($id, $firstname){
         $modifPseudo = new \Projet\Models\AdminModel();
         $modifPseudo = $modifPseudo->modifPseudo($id, $firstname);
-        var_dump($modifPseudo);die;
+        
+        $_SESSION['firstname'] = $firstname;
+        // var_dump($firstname);die;
 
-        // require 'app/Views/admin/connexion.php';
+        require 'app/Views/admin/connexion.php';
 
-        header(`Location: indexAdmin.php?action=compte&id=` . $_SESSION["id"]);
+        // header(`Location: indexAdmin.php?action=compte&id=` . $_SESSION["id"]);
     }
 }

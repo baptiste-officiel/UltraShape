@@ -17,7 +17,7 @@
             <a href="#"><img src="./app/Public/front/img/youtube.svg" alt="Youtube"></a>
             <a href="#"><img src="./app/Public/front/img/facebook.svg" alt="Facebook"></a>
         </div>
-        <p id="mentions-footer">Copyright 2022 - <a href="#">Mentions Légales</a> - <a href="#">RGPD</a></p>
+        <p id="mentions-footer">Copyright 2022 - <a href="index.php?action=mentionsLegales">Mentions Légales</a> - <a href="index.php?action=rgpd">RGPD</a></p>
     </div>
 </footer>
 
