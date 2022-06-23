@@ -65,6 +65,18 @@ ul{
     background-color: white;
 }
 
+.hidden{
+    display: none;
+}
+
+.black{
+    color: black;
+}
+
+.white{
+    color: white;
+}
+
 /* ------------------------------ header ---------------------- */
 
 header#bandeau{
@@ -138,23 +150,23 @@ header#bandeau #nav-bandeau #menu-bandeau #menu li{
 }
 
 header#bandeau #nav-bandeau #menu-bandeau #menu li:last-child a:first-child{
-    background: white;
+    /* background: white; */
     color: rgb(26, 26, 26);
     padding: 10px 20px;
     border-radius: 10px;
     /* margin-right: 10px; */
+    border: 1px solid rgb(0, 0, 0);
 }
 
 header#bandeau #nav-bandeau #menu-bandeau #menu li:last-child a:first-child:hover{
     background: rgb(26, 26, 26);
-    color: rgb(238, 238, 238);
-    border: 1px solid white;
+    /* color: rgb(238, 238, 238); */
 }
 
 
 
 header#bandeau #nav-bandeau #menu-bandeau #menu a{
-    color: rgb(238, 238, 238);
+    /* color: rgb(238, 238, 238); */
     transition: 0.3s;
 }
 
@@ -340,12 +352,14 @@ header#bandeau #titre-principal #subtitle{
 
 
 
-/* ------------------------------- contact ---------------------------  */
+/* ------------------------------- contact / input général---------------------------  */
 #contenu-contact #contact{
     width: 80%;
     display: flex;
     flex-wrap: wrap;
-    margin: 40px auto;
+    margin: 40px auto 20px;
+    padding-bottom: 50px;
+    position: relative;
 }
 
 #contenu-contact #texte-contact{
@@ -381,13 +395,17 @@ header#bandeau #titre-principal #subtitle{
     padding: 6px 4px;
 }
 
-#contenu-contact #contact input, #contenu-contact #contact textarea{
+#contenu-contact #contact input, #contenu-contact #contact textarea, #menuModifAdmin input{
     width: 100%;
     padding: 6px 4px;
     border: none;
     border: 0.5px rgb(173, 171, 171) solid;
     border-radius: 5px;
     margin-bottom: 15px;
+}
+
+#contenu-contact #contact textarea{
+    margin-bottom: 0;
 }
 
 #contenu-contact #contact #validate-form{
@@ -415,9 +433,14 @@ header#bandeau #titre-principal #subtitle{
 
 }
 
+#contenu-contact #contact #contact-form{
+    position: relative;
+    margin-bottom: 65px;
+}
+
 #contenu-contact #contact button{
-    display: block;
-    margin: 40px auto 60px;
+    /* display: block; */
+    /* margin: 40px auto 60px; */
     background: none;
     border: none;
     background-color: #2c80e7;
@@ -429,6 +452,9 @@ header#bandeau #titre-principal #subtitle{
     border-radius: 20px;
     font-weight: 500;
     cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: -55px;
 }
 
 #contenu-contact #contact button:hover{
@@ -457,6 +483,12 @@ header#bandeau #titre-principal #subtitle{
      width: 100%;
  }
 
+ #contenu-contact #contact .champs-obligatoires{
+    font-style: italic;
+    font-size: 0.6rem;
+    width: 100%;
+ } 
+
 /* --------------------- confirmContact -------------------------  */
 
 #confirmContact .container{
@@ -471,24 +503,32 @@ header#bandeau #titre-principal #subtitle{
     width: 90%;
 }
 
-/* -------------------------------------- about -------------------------------  */
-#contenu-about .container{
+/* -------------------------------------- about / Mentions Légales / RGPD-------------------------------  */
+#contenu-about .container, #contenu-mentions .container, #contenu-rgpd .container{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+}
+
+#contenu-mentions .container, #contenu-rgpd .container{
+    width: 95%;
+}
+
+#contenu-mentions .container h1, #contenu-rgpd .container h1{
+    margin: 10px 0;
 }
 
 #contenu-about .container img{
     width: 100%;
 }
 
-#contenu-about .container h2{
+#contenu-about .container h2, #contenu-mentions .container h2, #contenu-rgpd .container h2{
     text-align: center;
     width: 100%;
     margin: 25px 0;
 }
 
-#contenu-about .container p{
+#contenu-about .container p, #contenu-mentions .container #mentions-text p, #contenu-rgpd .container #rgpd-text p{
     width: 85%;
     text-align: justify;
     margin: 0 auto 10px;
@@ -699,14 +739,22 @@ header#bandeau #titre-principal #subtitle{
 
 }
 
+
+#contenuDashboard{
+    max-width: 100vw;
+    overflow-x: scroll;
+}
+
 #contenuDashboard table{
     border-collapse: collapse;
     background-color: white;
     text-align: center;
     width: 90%;
+    max-width: 100vw;
     margin: 0 auto;
     border-radius: 10px;
 }
+
 
 #contenuDashboard table tbody tr:nth-child(even){
     background-color: rgb(241, 241, 241);
@@ -744,11 +792,27 @@ header#bandeau #titre-principal #subtitle{
     margin: 10px 0;
 }
 
+#menuModifAdmin button{
+    padding: 6px 12px;
+    background: none;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#menuModifAdmin button:hover{
+    background: none;
+    color: black;
+    cursor: pointer;
+}
+
 
 @media screen and (min-width: 768px) {
 
     header#bandeau {
-        background: url(../img/fond-desktop.jpg) no-repeat center;
+        background: url(../img/back-desk.jpg) no-repeat;
+        background-position: center;
         background-size: cover;
         height: 65vh;
         display: flex;
@@ -757,16 +821,25 @@ header#bandeau #titre-principal #subtitle{
     }
 
     header#bandeau #bande{
-        background-color: rgba(0, 0, 0, 0.85);
         /* padding-bottom: 15px; */
+        position: fixed;
+        width: 100%;
+        z-index: 100000;
     }
+    
+    .fond-bande{
+        background-color: rgb(255, 255, 255);
+        transition: 0.5s;
+        box-shadow: 0 0 6px black;
+    }
+
 
     header#bandeau #nav-bandeau #logo{
         width: 35px;
         height: auto;
         margin-left: 30px;
         margin-top: 10px;
-        color: white;
+        color: rgb(0, 0, 0);
     }
     
     header#bandeau #nav-bandeau #menu-bandeau label img{
@@ -803,6 +876,7 @@ header#bandeau #titre-principal #subtitle{
         padding-top: 0;
         height: 100%;
         /* padding: 42vh 0; */
+
     
     }
     
@@ -812,20 +886,23 @@ header#bandeau #titre-principal #subtitle{
         font-size: 0.9rem;
     }
     
+    .black{
+        color: black;
+    }
 
     
     header#bandeau #nav-bandeau #menu-bandeau #menu li:last-child a:first-child{
-        border: 1px solid white;
+        border: 1px solid rgb(0, 0, 0);
     }
     
     header#bandeau #nav-bandeau #menu-bandeau #menu li:last-child a:first-child:hover{
-        background: none;
+        background:black;
         color: rgb(238, 238, 238);
     }
 
 
     header#bandeau #titre-principal{
-        margin: 0 auto 8%;
+        margin: 200px auto 8%;
         width: 40%;
         min-width: 400px;
         /* width: 100%; */
@@ -840,7 +917,7 @@ header#bandeau #titre-principal #subtitle{
     }
     
     header#bandeau #titre-principal h1{
-        background-color: rgba(255, 255, 255, 0.870);
+        background-color: rgba(31, 31, 31, 0.87);
         box-sizing: border-box;
         padding: 25px 20px;
         width: 100%;
@@ -851,6 +928,8 @@ header#bandeau #titre-principal #subtitle{
         border-top-right-radius: 10px;
         box-shadow: none;
         border-bottom: 1px solid rgb(160, 160, 160);
+        color: white;
+        text-shadow: #A5A5A5;
     }
     
     header#bandeau #titre-principal #subtitle{
@@ -861,8 +940,8 @@ header#bandeau #titre-principal #subtitle{
         padding: 10px 0;
         /* margin-top: -5px; */
         background: none;
-        background-color: rgba(255, 255, 255, 0.870);
-        color: rgb(26, 26, 26);
+        background-color: rgba(31, 31, 31, 0.87);
+        color: rgb(255, 255, 255);
        width: 100%;
        border-bottom-left-radius: 10px;
        border-bottom-right-radius: 10px;

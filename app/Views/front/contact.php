@@ -2,7 +2,7 @@
 require_once 'layouts/header.php';
 ?>
 
-<div id="contenu-contact">
+<main id="contenu-contact">
 <section id="texte-contact">
 <p class="container">Tu veux prendre contact avec nous pour fabriquer ta board custom ? Toutes les planches sont faites à la main et sont des modèles uniques !</p>
     <p class="container">Tu as d'autres questions ? </p>
@@ -11,41 +11,42 @@ require_once 'layouts/header.php';
 </section>
 <div id="contact" class="container">
 
-
-
         <form action="index.php?action=contactPost" method="post" id="contact-form" class="input-form">
 
             <div class="anim-input">
-            <label for="lastname">Nom*</label>
-            <input type="text" name="lastname" id="lastname">
+            <label for="lastname">Nom</label>
+            <input type="text" name="lastname" id="lastname" required>
             </div>
 
             <div class="anim-input">
-            <label for="firstname">Prénom*</label>
-            <input type="text" name="firstname" id="firstname">
+            <label for="firstname">Prénom</label>
+            <input type="text" name="firstname" id="firstname" required>
             </div>
 
             <div class="anim-input">
-            <label for="email">Email*</label>
-            <input type="email" name="email" id="email">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
             </div>
 
             <div class="anim-input">
             <label for="object">Objet de la demande</label>
-            <input type="text" name="object" id="object">
+            <input type="text" name="object" id="object" required>
             </div>
 
             <div class="anim-input">
-            <label for="content">Message*</label>
-            <textarea name="content" id="content" cols="30" rows="10"></textarea>
+            <label for="content">Message</label>
+            <textarea name="content" id="content" cols="30" rows="10" required></textarea>
             </div>
+
+            <p class="champs-obligatoires">Tous les champs sont obligatoires !</p>
 
             <div id="validate-form">
             <input type="checkbox" name="validate" id="validate">
             <label for="validate" id="validate-label">En cochant cette case, vous acceptez l'utilisation de vos données.</label>
-            </div>
+        </div>
+        <p id="acceptation" class="champs-obligatoires">Vous devez accepter afin d'envoyer votre demande !</p>
 
-            <button type="submit">Envoyer</button>
+            <button type="submit" id="envoiFormulaire">Envoyer</button>
         </form>
 
     <div id="coordonnes-contact">
@@ -58,7 +59,7 @@ require_once 'layouts/header.php';
     
     </div>   
     </div>
-</div>
+        </main>
 
 <?php
 require_once 'layouts/footer.php';
