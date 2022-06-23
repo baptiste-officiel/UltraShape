@@ -372,10 +372,6 @@ header#bandeau #titre-principal #subtitle{
     line-height: 2rempx;
 }
 
-#contenu-contact #contact .input-form, #contenu-contact #contact .input-form .anim-input{
-    /* position: relative; */
-    /* margin-top: -20px; */
-}
 
 #contenu-contact #contact .input-form .anim-input label{
     font-size: 0.8rem;
@@ -829,24 +825,30 @@ header#bandeau #titre-principal #subtitle{
 
 
     header#bandeau #titre-principal{
-        margin: 0 auto 30px;
-        width: 400px;
+        margin: 0 auto 8%;
+        width: 40%;
+        min-width: 400px;
         /* width: 100%; */
         /* background-color: blueviolet; */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: 700;
     }
     
     header#bandeau #titre-principal h1{
-        background-color: rgba(255, 255, 255, 0.806);
+        background-color: rgba(255, 255, 255, 0.870);
         box-sizing: border-box;
         padding: 25px 20px;
         width: 100%;
         text-align: center;
         box-shadow: 0 0 2px black;
-        border-radius: 2px;
+        /* border-radius: 10px; */
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
         box-shadow: none;
         border-bottom: 1px solid rgb(160, 160, 160);
     }
@@ -859,9 +861,11 @@ header#bandeau #titre-principal #subtitle{
         padding: 10px 0;
         /* margin-top: -5px; */
         background: none;
-        background-color: rgba(255, 255, 255, 0.806);
+        background-color: rgba(255, 255, 255, 0.870);
         color: rgb(26, 26, 26);
        width: 100%;
+       border-bottom-left-radius: 10px;
+       border-bottom-right-radius: 10px;
     }
     
 /* -------------------------------- contenu home / about home --------------------- */

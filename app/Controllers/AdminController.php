@@ -92,21 +92,19 @@ class AdminController{
     }
 
 
-    // Modification compte 
-    public function modifCompte(){
-        require 'app/Views/admin/modifCompte.php';
-    }
+// Modification compte 
+public function modifCompte($id){
+    require 'app/Views/admin/modifCompte.php';
+}
 
-    // Modification pseudo 
-    public function modificationPseudo($id, $firstname){
-        $modifPseudo = new \Projet\Models\AdminModel();
-        $modifPseudo = $modifPseudo->modifPseudo($id, $firstname);
-        
-        $_SESSION['firstname'] = $firstname;
-        // var_dump($firstname);die;
+// Modification pseudo 
+public function modificationPseudo($id, $firstname){
+    $modifPseudo = new \Projet\Models\AdminModel();
+    $modifOnePseudo = $modifPseudo->modifPseudo($firstname, $id);
+    
+    $_SESSION['firstname'] = $firstname;
+    // var_dump($firstname);die;
 
-        require 'app/Views/admin/connexion.php';
-
-        // header(`Location: indexAdmin.php?action=compte&id=` . $_SESSION["id"]);
-    }
+    header('Location: indexAdmin.php?action=compte&id=' . $_SESSION['id']);
+} 
 }

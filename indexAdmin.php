@@ -56,7 +56,7 @@ try{
 
         // Modifier compte 
         if ($_GET['action'] == 'editCompte'){
-            $adminController->modifCompte();
+            $adminController->modifCompte($_GET['id']);
         }
 
         if($_GET['action'] == 'editPseudo'){
