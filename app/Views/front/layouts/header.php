@@ -31,8 +31,8 @@
 
                     <ul id="menu">
                         <li><a href="index.php" class="black white">Accueil</a></li>
-                        <li><a href="index.php?action=creations" class="black white">Créations</a></li>
-                        <li><a href="index.php?action=reparations" class="black white">Réparations</a></li>
+                        <li><a href="index.php" class="black white">Créations</a></li>
+                        <li><a href="index.php" class="black white">Réparations</a></li>
                         <li><a href="index.php?action=about" class="black white">A propos</a></li>
                         <li><a href="index.php?action=contact" class="black white">Contact</a></li>
                         <!-- <li><a href="index.php?action=connexion">Connexion</a><a href="index.php?action=inscription">Inscription</a></li> -->

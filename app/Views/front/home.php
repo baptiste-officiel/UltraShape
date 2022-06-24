@@ -9,7 +9,7 @@ require_once 'layouts/header.php';
             <div id="texte-creation">
                 <h2>Créations</h2>
                 <p>Découvre nos dernières réalisations et prends contact avec nous pour concevoir ta board custom !</p>
-                <p> <a class="bouton-noir" href="index.php?action=creations">Voir tout</a>
+                <p> <a class="bouton-noir" href="index.php">Voir tout</a>
                 </p>
             </div>
             <!-- img  -->
@@ -24,7 +24,7 @@ require_once 'layouts/header.php';
         <h2>Réparations</h2>
         <p>Ta board a pris un coup ? Une dérive s’est arrachée ? Consulte nos tarifs et contacte nous afin de la
             réparer et de vite la remettre à l’eau !</p>
-        <a class="bouton-blanc" href="index.php?action=reparations">Voir tout</a>
+        <a class="bouton-blanc" href="index.php">Voir tout</a>
     </section>
 
 
