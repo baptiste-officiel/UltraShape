@@ -3,29 +3,33 @@ require_once 'layouts/header.php';
 ?>
 
 <main id="contenu-contact">
+    <!-- Texte introduction page contact  -->
 <section id="texte-contact">
-<p class="container">Tu veux prendre contact avec nous pour fabriquer ta board custom ? Toutes les planches sont faites à la main et sont des modèles uniques !</p>
+<h2 class="container">Contact</h2>
+    <p class="container">Tu veux prendre contact avec nous pour fabriquer ta board custom ? Toutes les planches sont faites à la main et sont des modèles uniques !</p>
     <p class="container">Tu as d'autres questions ? </p>
     <p class="container">Tu trouveras ici nos coordonnées ! Tu peux également nous contacter via le formulaire et nous reviendrons vers toi dans les plus brefs délais !</p>
     
 </section>
 <div id="contact" class="container">
 
+<!-- Formulaire  -->
+
         <form action="index.php?action=contactPost" method="post" id="contact-form" class="input-form">
 
             <div class="anim-input">
             <label for="lastname">Nom</label>
-            <input type="text" name="lastname" id="lastname" required>
+            <input class="local" type="text" name="lastname" id="lastname" required>
             </div>
 
             <div class="anim-input">
             <label for="firstname">Prénom</label>
-            <input type="text" name="firstname" id="firstname" required>
+            <input class="local" type="text" name="firstname" id="firstname" required>
             </div>
 
             <div class="anim-input">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" required>
+            <input class="local"  type="email" name="email" id="email" required>
             </div>
 
             <div class="anim-input">
@@ -50,6 +54,9 @@ require_once 'layouts/header.php';
         </form>
 
     <div id="coordonnes-contact">
+
+    <!-- Coordonnées et map  -->
+
     <h2>Ultra Shape</h2>
         <a href="tel:+33238325260" id="telephone">02 38 32 52 60</a>
         <address>
